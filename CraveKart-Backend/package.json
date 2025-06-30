@@ -1,0 +1,16 @@
+{
+  "name": "cravekart-backend",
+  "version": "1.0.0",
+  "description": "CraveKart Backend application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cravekart",
+    "nodejs",
+    "backend"
+  ],
+  "author": "deepthi d acharya",
+  "license": "ISC"
+}
