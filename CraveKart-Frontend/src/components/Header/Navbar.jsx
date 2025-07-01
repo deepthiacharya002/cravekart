@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <Layout>
       <Header className="navbar-header">
-        <div className="navbar-logo">🍽️ Crave Kart</div>
+        <div className="navbar-logo">🍽️ Crave Cart</div>
         <Menu
           theme="dark"
           mode="horizontal"
