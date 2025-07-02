@@ -1,10 +1,16 @@
 import "./homepage.css"
+import Products from "../Products/Products";
 
-function HomePage() {
+function HomePage(props) {
     return (
-        <div className="homepage" >
-        <img src="/cravekart.png" alt='cravekart' height='300' width='250'/>
-   </div>
+        <div className={props.containerClass}>
+            <div className="homepage" >
+                <img src="/cravekart.png" alt='cravekart' height='300' width='250'/>
+            </div>
+            <div>
+                <Products />
+            </div>
+        </div>
     )
 }
 

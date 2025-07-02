@@ -9,18 +9,21 @@ import {
   Link
 } from "react-router-dom";
 import AboutPage from './screens/About/About';
+import { useState } from 'react';
 
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const containerClass = darkMode ? 'container dark-mode' : 'container';
+
   return (
     <>
       <Router>
-      <Navbar />
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
-        {/* <Switch> */}
-          <Route path="/about" element={<AboutPage/>} />
-          <Route path="/" element={<HomePage />} />
-        {/* </Switch> */}
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/" element={<HomePage containerClass={containerClass} />} />
         </Routes>
       </Router>
     </>
