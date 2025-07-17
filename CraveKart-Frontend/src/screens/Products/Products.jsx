@@ -6,17 +6,17 @@ import { HomeOutlined, AppstoreOutlined } from '@ant-design/icons';
 
 const categories = [
   { label: 'Biryani', img: '/images/Chicken-Biryani-Square.jpg', description: 'Aromatic rice with flavorful spices and meat or vegetables.' },
-  { label: 'Chicken', img: '/images/Chicken-Biryani-Square.jpg', description: 'Delicious chicken dishes prepared in various styles.' },
-  { label: 'Pizza', img: '/images/Chicken-Biryani-Square.jpg', description: 'Cheesy, crusty, and topped with your favorite ingredients.' },
-  { label: 'Healthy Food', img: '/images/Chicken-Biryani-Square.jpg', description: 'Nutritious meals packed with fresh vegetables and lean proteins.' },
-  { label: 'Veg Meal', img: '/images/Chicken-Biryani-Square.jpg', description: 'Wholesome vegetarian meals with Indian flavors.' },
-  { label: 'Thali', img: '/images/Chicken-Biryani-Square.jpg', description: 'Traditional Indian platter with multiple dishes.' }
+  { label: 'Meat', img: '/images/meat.jpg', description: 'Delicious chicken dishes prepared in various styles.' },
+  { label: 'Pizza', img: '/images/pizza.jpg', description: 'Cheesy, crusty, and topped with your favorite ingredients.' },
+  { label: 'Salad', img: '/images/salad.jpg', description: 'Nutritious meals packed with fresh vegetables and lean proteins.' },
+  { label: 'Veg Meal', img: '/images/vegmeal.jpg', description: 'Wholesome vegetarian meals with Indian flavors.' },
+  { label: 'Non-Veg Meal', img: '/images/nonvegmeal.jpg', description: 'Traditional Indian platter with multiple dishes.' }
 ];
 
 const App = () => {
   return (
     <div className="app-product">
-      {/* <header className</nav>="header">
+      {/* <header className="header">
         <div className="logo">zomato</div>
         <div className="location">
           <HomeOutlined />

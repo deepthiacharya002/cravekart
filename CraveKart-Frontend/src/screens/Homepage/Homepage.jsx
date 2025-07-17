@@ -1,17 +1,22 @@
 import "./homepage.css"
 import Products from "../Products/Products";
+import Page from "../frontpage/page";
+import Restaurants from "../restaurants/Restaurants";
 
-function HomePage(props) {
+function HomePage() {
     return (
-        <div className={props.containerClass}>
-            <div className="homepage" >
-                <img src="/cravekart.png" alt='cravekart' height='300' width='250'/>
-            </div>
+            <div className="Homepage" >
+                <div className="main">
+                <img src="/images/firstpimg.jpg" width="1500" height="900" alt="Burger" />
+            </div>    
             <div>
-                <Products />
+                <Restaurants />
             </div>
+            
         </div>
     )
 }
 
 export default HomePage;
+
+

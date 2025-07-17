@@ -1,3 +1,17 @@
 .about-page {
     margin: 5rem;
+    font-family: sans-serif;
+    font-style: italic;
+}
+.info{
+    background-color: aquamarine;
+    padding: 2rem;
+    border-radius: 0%;
+}
+.about-page h1{
+    text-align: center;
+    color:darkblue;
+}
+.body{
+    background-color: brown;
 }

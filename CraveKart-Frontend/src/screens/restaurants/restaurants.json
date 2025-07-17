@@ -1,0 +1,293 @@
+[
+  {
+    "name": "Spice Symphony",
+    "cuisine": "Indian",
+    "image":"/images/resturants/indian_1.jpg",
+    "ratings": 4.9,
+    "foods": [
+      {
+        "name": "Butter Chicken",
+        "price": 250,
+        "image": "https://source.unsplash.com/800x600/?butter-chicken"
+      },
+      {
+        "name": "Paneer Tikka",
+        "price": 200,
+        "image": "https://source.unsplash.com/800x600/?paneer-tikka"
+      },
+      {
+        "name": "Naan",
+        "price": 40,
+        "image": "https://source.unsplash.com/800x600/?naan"
+      },
+      {
+        "name": "Dal Makhani",
+        "price": 180,
+        "image": "https://source.unsplash.com/800x600/?dal-makhani"
+      },
+      {
+        "name": "Gulab Jamun",
+        "price": 90,
+        "image": "https://source.unsplash.com/800x600/?gulab-jamun"
+      }
+    ]
+  },
+  {
+    "name": "La Pasta",
+    "cuisine": "Italian",
+    "ratings": 4.7,
+    "image": "/images/resturants/italy.jpg",
+    "foods": [
+      {
+        "name": "Penne Alfredo",
+        "price": 300,
+        "image": "https://source.unsplash.com/800x600/?penne-pasta"
+      },
+      {
+        "name": "Margherita Pizza",
+        "price": 280,
+        "image": "https://source.unsplash.com/800x600/?margherita-pizza"
+      },
+      {
+        "name": "Bruschetta",
+        "price": 120,
+        "image": "https://source.unsplash.com/800x600/?bruschetta"
+      },
+      {
+        "name": "Tiramisu",
+        "price": 150,
+        "image": "https://source.unsplash.com/800x600/?tiramisu"
+      },
+      {
+        "name": "Spaghetti Carbonara",
+        "price": 350,
+        "image": "https://source.unsplash.com/800x600/?spaghetti"
+      }
+    ]
+  },
+  {
+    "name": "Taco Fiesta",
+    "cuisine": "Mexican",
+    "ratings": 4.5,
+    "image": "/images/resturants/mex.jpg",
+    "foods": [
+      {
+        "name": "Chicken Tacos",
+        "price": 220,
+        "image": "https://source.unsplash.com/800x600/?chicken-tacos"
+      },
+      {
+        "name": "Guacamole",
+        "price": 150,
+        "image": "https://source.unsplash.com/800x600/?guacamole"
+      },
+      {
+        "name": "Churros",
+        "price": 100,
+        "image": "https://source.unsplash.com/800x600/?churros"
+      },
+      {
+        "name": "Quesadilla",
+        "price": 180,
+        "image": "https://source.unsplash.com/800x600/?quesadilla"
+      },
+      {
+        "name": "Nachos",
+        "price": 130,
+        "image": "https://source.unsplash.com/800x600/?nachos"
+      }
+    ]
+  },
+  {
+    "name": "Seoul Bites",
+    "cuisine": "Korean",
+    "ratings": 4.2,
+    "image": "/images/resturants/korean.jpg",
+    "foods": [
+      {
+        "name": "Kimchi",
+        "price": 100,
+        "image": "https://source.unsplash.com/800x600/?kimchi"
+      },
+      {
+        "name": "Bibimbap",
+        "price": 250,
+        "image": "https://source.unsplash.com/800x600/?bibimbap"
+      },
+      {
+        "name": "Korean Fried Chicken",
+        "price": 300,
+        "image": "https://source.unsplash.com/800x600/?korean-fried-chicken"
+      },
+      {
+        "name": "Tteokbokki",
+        "price": 150,
+        "image": "https://source.unsplash.com/800x600/?tteokbokki"
+      },
+      {
+        "name": "Bulgogi",
+        "price": 280,
+        "image": "https://source.unsplash.com/800x600/?bulgogi"
+      }
+    ]
+  },
+  {
+    "name": "Wok & Roll",
+    "cuisine": "Chinese",
+    "ratings": 4.8,
+    "image": "/images/resturants/chinese.jpg",
+    "foods": [
+      {
+        "name": "Spring Rolls",
+        "price": 100,
+        "image": "https://source.unsplash.com/800x600/?spring-rolls"
+      },
+      {
+        "name": "Kung Pao Chicken",
+        "price": 250,
+        "image": "https://source.unsplash.com/800x600/?kung-pao-chicken"
+      },
+      {
+        "name": "Sweet and Sour Pork",
+        "price": 300,
+        "image": "https://source.unsplash.com/800x600/?sweet-and-sour-pork"
+      },
+      {
+        "name": "Fried Rice",
+        "price": 150,
+        "image": "https://source.unsplash.com/800x600/?fried-rice"
+      },
+      {
+        "name": "Mapo Tofu",
+        "price": 180,
+        "image": "https://source.unsplash.com/800x600/?mapo-tofu"
+      }
+    ]
+  },
+  {
+    "name": "Bangkok Street",
+    "cuisine": "Thai",
+    "ratings": 3.7,
+    "image": "/images/resturants/thai.jpg",
+    "foods": [
+      {
+        "name": "Pad Thai",
+        "price": 250,
+        "image": "https://source.unsplash.com/800x600/?pad-thai"
+      },
+      {
+        "name": "Green Curry",
+        "price": 300,
+        "image": "https://source.unsplash.com/800x600/?green-curry"
+      },
+      {
+        "name": "Tom Yum Soup",
+        "price": 200,
+        "image": "https://source.unsplash.com/800x600/?tom-yum-soup"
+      },
+      {
+        "name": "Mango Sticky Rice",
+        "price": 150,
+        "image": "https://source.unsplash.com/800x600/?mango-sticky-rice"
+      },
+      {
+        "name": "Spring Rolls",
+        "price": 100,
+        "image": "https://source.unsplash.com/800x600/?spring-rolls"
+      }
+    ]
+  },
+  {
+    "name": "Le Petit Caf\u00e9",
+    "cuisine": "French",
+    "ratings": 3.9,
+    "image": "/images/resturants/french.jpg",
+    "foods": [
+      {
+        "name": "Croissant",
+        "price": 50,
+        "image": "https://source.unsplash.com/800x600/?croissant"
+      },
+      {
+        "name": "Ratatouille",
+        "price": 200,
+        "image": "https://source.unsplash.com/800x600/?ratatouille"
+      },
+      {
+        "name": "Coq au Vin",
+        "price": 300,
+        "image": "https://source.unsplash.com/800x600/?coq-au-vin"
+      },
+      {
+        "name": "Crème Brûlée",
+        "price": 150,
+        "image": "https://source.unsplash.com/800x600/?creme-brulee"
+      },
+      {
+        "name": "Baguette",
+        "price": 100,
+        "image": "https://source.unsplash.com/800x600/?baguette"
+      }
+    ]
+  },
+   {
+    "name": "Burger Boss",
+    "cuisine": "American",
+    "ratings": 4.8,
+    "image": "/images/resturants/american.jpg",
+    "foods": [
+      {
+        "name": "Cheeseburger",
+        "price": 300,
+        "image": "https://source.unsplash.com/800x600/?cheeseburger"
+      },
+      {
+        "name": "BBQ Ribs",
+        "price": 400,
+        "image": "https://source.unsplash.com/800x600/?bbq-ribs"
+      },
+      {
+        "name": "Caesar Salad",
+        "price": 200,
+        "image": "https://source.unsplash.com/800x600/?caesar-salad"
+      },
+      {
+        "name": "Milkshake",
+        "price": 150,
+        "image": "https://source.unsplash.com/800x600/?milkshake"
+      },
+      {
+        "name": "French Fries",
+        "price": 100,
+        "image": "https://source.unsplash.com/800x600/?french-fries"
+      }
+    ]
+  },
+  {
+    "name": "Cedar Bites",
+    "cuisine": "Lebanese",
+    "ratings": 3.4,
+    "image": "/images/resturants/lebanesse.jpg",
+    "foods": [
+      { "name": "Hummus", "price": 150, "image": "https://source.unsplash.com/800x600/?hummus" },
+      { "name": "Falafel", "price": 120, "image": "https://source.unsplash.com/800x600/?falafel" },
+      { "name": "Shawarma", "price": 180, "image": "https://source.unsplash.com/800x600/?shawarma" },
+      { "name": "Tabbouleh", "price": 140, "image": "https://source.unsplash.com/800x600/?tabbouleh" },
+      { "name": "Baklava", "price": 160, "image": "https://source.unsplash.com/800x600/?baklava" }
+
+    ]
+  },
+    {
+    "name": "Sakura Delight",
+    "cuisine": "Japanese",
+    "ratings": 4.6,
+    "image": "/images/resturants/japanesse.jpg",
+    "foods": [
+      { "name": "Sushi", "price": 350, "image": "https://source.unsplash.com/800x600/?sushi" },
+      { "name": "Ramen", "price": 250, "image": "https://source.unsplash.com/800x600/?ramen" },
+      { "name": "Tempura", "price": 200, "image": "https://source.unsplash.com/800x600/?tempura" },
+      { "name": "Miso Soup", "price": 100, "image": "https://source.unsplash.com/800x600/?miso-soup" },
+      { "name": "Mochi", "price": 120, "image": "https://source.unsplash.com/800x600/?mochi" }
+    ]
+  }
+]

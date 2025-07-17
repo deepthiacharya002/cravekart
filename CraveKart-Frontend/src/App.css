@@ -42,3 +42,8 @@ button {
   font-size: 1rem;
   transition: background-color 0.3s;
 }
+.about-page {
+  background-color: #15b3fc; /* light sky blue */
+  min-height: 100vh;
+  padding: 2rem;
+}
