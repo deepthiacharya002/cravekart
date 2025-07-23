@@ -14,14 +14,34 @@ const Restaurant = () => {
     const handleQuantityChange = (foodName, value) => {
         setQuantities((prev) => ({
             ...prev,
-            [foodName]: Math.max(1, Number(value)),
+            [foodName]: Math.max(0, Number(value)),
         }));
     };
 
     // Handle Add to Cart (replace with your cart logic)
     const handleAddToCart = (item) => {
-        const qty = quantities[item.name] || 1;
-        alert(`Added ${qty} x ${item.name} to cart!`);
+        const qty = quantities[item.name] || 0;
+        if (qty > 0) {
+            alert(`Added ${qty} x ${item.name} to cart!`);
+        } else {
+            alert(`Please select at least 1 item to add to cart.`);
+        }
+        // TODO: Integrate with your cart state/logic
+    };
+
+    // Handle Add All to Cart
+    const handleAddAllToCart = () => {
+        if (!restaurant.foods) return;
+        const itemsToAdd = restaurant.foods.filter(item => (quantities[item.name] || 0) > 0);
+        if (itemsToAdd.length === 0) {
+            alert('Please select at least 1 item to add to cart.');
+            return;
+        }
+        let message = 'Added to cart:\n';
+        itemsToAdd.forEach(item => {
+            message += `${quantities[item.name] || 0} x ${item.name}\n`;
+        });
+        alert(message);
         // TODO: Integrate with your cart state/logic
     };
 
@@ -43,13 +63,18 @@ const Restaurant = () => {
                             <span className="food-price">${item.price.toFixed(2)}</span>
                         </div>
                         <div className="food-actions">
-                            <input
-                                type="number"
-                                min="1"
-                                className="quantity-input"
-                                value={quantities[item.name] || 1}
-                                onChange={(e) => handleQuantityChange(item.name, e.target.value)}
-                            />
+                            <div className="quantity-selector">
+                                <button
+                                    className="quantity-btn"
+                                    onClick={() => handleQuantityChange(item.name, (quantities[item.name] || 0) - 1)}
+                                    disabled={(quantities[item.name] || 0) <= 0}
+                                >−</button>
+                                <span className="quantity-value">{quantities[item.name] || 0}</span>
+                                <button
+                                    className="quantity-btn"
+                                    onClick={() => handleQuantityChange(item.name, (quantities[item.name] || 0) + 1)}
+                                >+</button>
+                            </div>
                             <button
                                 className="add-to-cart-btn"
                                 onClick={() => handleAddToCart(item)}
@@ -60,6 +85,14 @@ const Restaurant = () => {
                     </li>
                 ))}
             </ul>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}>
+                <button
+                    className="add-to-cart-btn"
+                    onClick={handleAddAllToCart}
+                >
+                    Add All Selected Items to Cart
+                </button>
+            </div>
         </div>
         </>
     );
