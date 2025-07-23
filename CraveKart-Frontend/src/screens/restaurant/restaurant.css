@@ -1,0 +1,106 @@
+.restaurant-container-parent {   
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat fixed;
+    filter: blur(8px);
+    pointer-events: none;
+}
+.restaurant-container {
+    padding: 50px;
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.restaurant-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.restaurant-container p {
+    margin: 4px 0 12px 0;
+    color: #444;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.food-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.food-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.food-price {
+    color: #888;
+    font-size: 1rem;
+}
+
+.food-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-input {
+    width: 48px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    background: #ff7043;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background: #ff5722;
+}
+
+/* Page background */
+body, .restaurant-bg {
+    /* min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat fixed; */
+}
+
+/* Optional: Add a slight overlay for readability */
+.restaurant-bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.3);
+    z-index: 1;
+    pointer-events: none;
+}

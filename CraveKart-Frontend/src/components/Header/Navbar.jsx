@@ -1,15 +1,16 @@
 import { Layout, Menu } from 'antd';
 import { HomeOutlined, AppstoreOutlined } from '@ant-design/icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './navbar.css';
 
 const { Header } = Layout;
 
 function Navbar(props) {
+  const navigate = useNavigate();
   return (
     <Layout>
       <Header className="navbar-header">
-        <div className="navbar-logo">🍽️ Crave Cart</div>
+        <div className="navbar-logo" onClick={() => navigate("/")}>🍽️ Crave Cart</div>
         <Menu
           theme="dark"
           mode="horizontal"

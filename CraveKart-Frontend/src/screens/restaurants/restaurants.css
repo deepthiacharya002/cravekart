@@ -23,3 +23,29 @@
     padding: 1rem;
     width: 300px;
 }
+
+.indian-cuisine {
+    position: relative;
+    overflow: hidden;
+}
+
+.indian-cuisine::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('indian_1.jpg') center/cover no-repeat;
+    filter: blur(10px) brightness(0.8);
+    z-index: 1;
+}
+
+.indian-cuisine > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Optional: Make text more readable */
+.indian-cuisine h2,
+.indian-cuisine p {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}

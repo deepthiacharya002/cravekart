@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import AboutPage from './screens/About/About';
 import { useState } from 'react';
+import Restaurant from './screens/Restaurant/restaurant';
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
         <Routes>
           <Route path="/about" element={<AboutPage />} />
           <Route path="/" element={<HomePage containerClass={containerClass} />} />
+          <Route path="/restaurants/restaurant" element={<Restaurant />} />
+          {/* Add more routes as needed */}
         </Routes>
       </Router>
     </>
