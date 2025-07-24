@@ -11,6 +11,7 @@ import {
 import AboutPage from './screens/About/About';
 import { useState } from 'react';
 import Restaurant from './screens/Restaurant/restaurant';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/" element={<HomePage containerClass={containerClass} />} />
           <Route path="/restaurants/restaurant" element={<Restaurant />} />
+          <Route path="/cart" element={<Cart />} />
           {/* Add more routes as needed */}
         </Routes>
       </Router>
