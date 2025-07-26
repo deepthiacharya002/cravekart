@@ -1,4 +1,3 @@
-import Navbar from './components/Header/Navbar'
 import './App.css'
 import HomePage from './screens/Homepage/Homepage'
 import {
@@ -10,19 +9,21 @@ import {
 } from "react-router-dom";
 import AboutPage from './screens/About/About';
 import { useState } from 'react';
-import Restaurant from './screens/Restaurant/restaurant';
+import Restaurant from './screens/restaurant/restaurant';
 import Cart from './components/Cart/Cart';
+import HeaderNavbar from './components/Navbar/HeaderNavbar';
 
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode] = useState(false);
 
   const containerClass = darkMode ? 'container dark-mode' : 'container';
 
   return (
     <>
       <Router>
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        {/* <Navbar darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+        <HeaderNavbar/>
         <Routes>
           <Route path="/about" element={<AboutPage />} />
           <Route path="/" element={<HomePage containerClass={containerClass} />} />

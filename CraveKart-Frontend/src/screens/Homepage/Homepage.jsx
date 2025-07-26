@@ -5,14 +5,13 @@ import Restaurants from "../restaurants/Restaurants";
 
 function HomePage() {
     return (
-            <div className="Homepage" >
-                <div className="main">
+        <div className="Homepage" >
+            <div className="main">
                 <img src="/images/firstpimg.jpg" width="1500" height="900" alt="Burger" />
-            </div>    
+            </div>
             <div>
                 <Restaurants />
             </div>
-            
         </div>
     )
 }

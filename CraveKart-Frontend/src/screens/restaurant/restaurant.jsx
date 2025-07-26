@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import './restaurant.css';
+import { useNavigate } from 'react-router-dom';
 
 const Restaurant = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const restaurant = location.state;
 
     // State to track quantities for each food item
@@ -22,7 +24,9 @@ const Restaurant = () => {
     const handleAddToCart = (item) => {
         const qty = quantities[item.name] || 0;
         if (qty > 0) {
-            alert(`Added ${qty} x ${item.name} to cart!`);
+            // alert(`Added ${qty} x ${item.name} to cart!`);
+            const selectedItem = { ...item, quantity: qty };
+            navigate('/cart', { state: [selectedItem] });
         } else {
             alert(`Please select at least 1 item to add to cart.`);
         }
@@ -37,11 +41,16 @@ const Restaurant = () => {
             alert('Please select at least 1 item to add to cart.');
             return;
         }
-        let message = 'Added to cart:\n';
+        // let message = 'Added to cart:\n';
+        const items = [];
         itemsToAdd.forEach(item => {
-            message += `${quantities[item.name] || 0} x ${item.name}\n`;
+            // message += `${quantities[item.name] || 0} x ${item.name}\n`;
+            const selectedItem = { ...item, quantity: quantities[item.name] || 0 };
+            items.push(selectedItem);
         });
-        alert(message);
+        // alert(message);
+        console.log('Items added to cart:', items);
+        navigate('/cart', { state: items });
         // TODO: Integrate with your cart state/logic
     };
 
