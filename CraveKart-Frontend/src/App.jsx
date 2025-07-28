@@ -12,6 +12,10 @@ import { useState } from 'react';
 import Restaurant from './screens/restaurant/restaurant';
 import Cart from './components/Cart/Cart';
 import HeaderNavbar from './components/Navbar/HeaderNavbar';
+import { CartProvider } from './context/CartContext';
+import CartSummary from './components/CartSummary/CartSummary';
+import Favorites from './components/Favorites/Favorites';
+import UserGuide from './components/UserGuide/UserGuide';
 
 
 function App() {
@@ -20,7 +24,7 @@ function App() {
   const containerClass = darkMode ? 'container dark-mode' : 'container';
 
   return (
-    <>
+    <CartProvider>
       <Router>
         {/* <Navbar darkMode={darkMode} setDarkMode={setDarkMode} /> */}
         <HeaderNavbar/>
@@ -29,10 +33,13 @@ function App() {
           <Route path="/" element={<HomePage containerClass={containerClass} />} />
           <Route path="/restaurants/restaurant" element={<Restaurant />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/favorites" element={<Favorites />} />
           {/* Add more routes as needed */}
         </Routes>
+        {/* <CartSummary /> */}
+        {/* <UserGuide /> */}
       </Router>
-    </>
+    </CartProvider>
   )
 }
 
