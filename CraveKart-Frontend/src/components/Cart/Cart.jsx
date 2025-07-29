@@ -17,6 +17,21 @@ const Cart = () => {
 
     const { cartItems = [], totalAmount = 0 } = cartState || {};
 
+    const sendOrderToBackend = async (order) => {
+        try {
+            const response = await fetch('http://localhost:5000/order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(order)
+            });
+            const data = await response.json();
+            console.log('Order sent to backend:', data);
+        } catch (error) {
+            console.error('Error sending order:', error);
+        }
+    };
 
     const onPurchase = () => {
         console.log('Purchase initiated');
@@ -36,9 +51,15 @@ const Cart = () => {
             cartHelpers.addToOrderHistory(dispatch, order);
             
             // Clear cart after order
-            cartHelpers.clearCart(dispatch);
             
-            setNotify({ message: msg, type: 'success', title: 'Order Confirmation' });
+            sendOrderToBackend(order).then(() => {
+                console.log('Order sent to backend successfully');
+                setNotify({ message: msg, type: 'success', title: 'Order Confirmation' });
+                cartHelpers.clearCart(dispatch);
+            }).catch(err => {
+                console.error('Failed to send order to backend:', err);
+            });
+            
         } else {
             setShowAddressDialog(true);
         }
