@@ -74,26 +74,19 @@ const Cart = () => {
             />
                 <div className="cart-container">
                     <h2>Your Cart</h2>
-                    {/* Debug info */}
-                    {/* <div style={{fontSize: '12px', color: '#666', marginBottom: '10px'}}>
-                        Debug: Items in cart: {cartItems?.length || 0}, Total: ${totalAmount?.toFixed(2) || '0.00'}
-                        <br />
-                        Cart State: {JSON.stringify(cartState, null, 2)}
-                    </div> */}
-                    
-                    {/* Test button */}
-                    {/* <button 
-                        onClick={() => {
-                            const testItem = { name: 'Direct Test Item', price: 5 };
-                            cartHelpers.addToCart(dispatch, testItem, 2);
-                        }}
-                        style={{ marginBottom: '10px', padding: '5px 10px', fontSize: '12px' }}
-                    >
-                        Test Add Item Directly
-                    </button> */}
                     
                     {!cartItems || cartItems.length === 0 ? (
-                        <p>No items selected.</p>
+                        <div className="empty-cart">
+                            <div className="empty-cart-icon">🛒</div>
+                            <h3>Your cart is empty</h3>
+                            <p>Looks like you haven't added any delicious items to your cart yet. Browse our menu and discover amazing food!</p>
+                            <button 
+                                className="browse-items-btn"
+                                onClick={() => navigate('/')}
+                            >
+                                Browse Menu
+                            </button>
+                        </div>
                     ) : (
                         <ul className="cart-list">
                             {cartItems.map((item, index) => (
