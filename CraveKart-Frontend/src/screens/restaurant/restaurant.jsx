@@ -118,21 +118,7 @@ const Restaurant = ({ onContextMenu }) => {
                     onClick={handleAddAllToCart}
                 >
                     Add All Selected Items to Cart
-                </button>
-                
-                {/* Debug button */}
-                {/* <button
-                    className="add-to-cart-btn"
-                    onClick={() => {
-                        const testItem = { name: 'Test Item', price: 10 };
-                        console.log('Test adding item:', testItem);
-                        cartHelpers.addToCart(dispatch, testItem, 1);
-                        console.log('Cart state after test add:', cartState);
-                    }}
-                    style={{ background: '#007bff' }}
-                >
-                    Test Add Item
-                </button> */}
+                </button>   
             </div>
         </div>
         </>

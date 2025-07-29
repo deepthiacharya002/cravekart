@@ -17,13 +17,6 @@ const Cart = () => {
 
     const { cartItems = [], totalAmount = 0 } = cartState || {};
 
-    // Debug logging
-    React.useEffect(() => {
-        console.log('Cart component - cartState:', cartState);
-        console.log('Cart component - cartItems:', cartItems);
-        console.log('Cart component - totalAmount:', totalAmount);
-    }, [cartState, cartItems, totalAmount]);
-
 
     const onPurchase = () => {
         console.log('Purchase initiated');
@@ -72,46 +65,46 @@ const Cart = () => {
                 }}
                 onClose={() => setNotify({ message: '', type: '' })}
             />
-                <div className="cart-container">
-                    <h2>Your Cart</h2>
-                    
-                    {!cartItems || cartItems.length === 0 ? (
-                        <div className="empty-cart">
-                            <div className="empty-cart-icon">🛒</div>
-                            <h3>Your cart is empty</h3>
-                            <p>Looks like you haven't added any delicious items to your cart yet. Browse our menu and discover amazing food!</p>
-                            <button 
-                                className="browse-items-btn"
-                                onClick={() => navigate('/')}
-                            >
-                                Browse Menu
-                            </button>
-                        </div>
-                    ) : (
-                        <ul className="cart-list">
-                            {cartItems.map((item, index) => (
-                                <li key={`${item.name}-${index}`} className="cart-item">
-                                    <span>{item.quantity} x {item.name}</span>
-                                    <span>${(item.price * item.quantity).toFixed(2)}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                    <div className="cart-total">
-                        <strong>Total: ${(totalAmount || 0).toFixed(2)}</strong>
+            <div className="cart-container">
+                <h2>Your Cart</h2>
+                
+                {!cartItems || cartItems.length === 0 ? (
+                    <div className="empty-cart">
+                        <div className="empty-cart-icon">🛒</div>
+                        <h3>Your cart is empty</h3>
+                        <p>Looks like you haven't added any delicious items to your cart yet. Browse our menu and discover amazing food!</p>
+                        <button 
+                            className="browse-items-btn"
+                            onClick={() => navigate('/')}
+                        >
+                            Browse Menu
+                        </button>
                     </div>
-                    <div className="payment-info">
-                        <p>Payment Method: Cash on Delivery</p>
-                        <small>Currently, we only support Cash on Delivery payment option.</small>
-                    </div>
-                    <button
-                        className="purchase-btn"
-                        onClick={onPurchase}
-                        disabled={!cartItems || cartItems.length === 0}
-                    >
-                        Place Order - Cash on Delivery
-                    </button>
+                ) : (
+                    <ul className="cart-list">
+                        {cartItems.map((item, index) => (
+                            <li key={`${item.name}-${index}`} className="cart-item">
+                                <span>{item.quantity} x {item.name}</span>
+                                <span>₹{(item.price * item.quantity).toFixed(2)}</span>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+                <div className="cart-total">
+                    <strong>Total: ₹{(totalAmount || 0).toFixed(2)}</strong>
                 </div>
+                <div className="payment-info">
+                    <p>Payment Method: Cash on Delivery</p>
+                    <small>Currently, we only support Cash on Delivery payment option.</small>
+                </div>
+                <button
+                    className="purchase-btn"
+                    onClick={onPurchase}
+                    disabled={!cartItems || cartItems.length === 0}
+                >
+                    Place Order - Cash on Delivery
+                </button>
+            </div>
         </>
     );
 };
