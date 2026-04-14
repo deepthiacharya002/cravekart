@@ -37,7 +37,7 @@ const cartReducer = (state, action) => {
       );
 
       let updatedCartItems;
-      if (existingItemIndex >= 0) {
+      if (existingItemIndex >= 0){
         // Item exists, update quantity
         updatedCartItems = state.cartItems.map((cartItem, index) =>
           index === existingItemIndex

@@ -13,9 +13,6 @@ const HeaderNavbar = () => {
       <div className="navbar-logo">🍽️ CraveCart</div>
       <nav className="navbar-links">
         <a href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>Home</a>
-        <a href="/favorites" onClick={(e) => { e.preventDefault(); navigate('/favorites'); }}>
-          Favorites
-        </a>
         <a
           href="/cart"
           className="cart-link"
