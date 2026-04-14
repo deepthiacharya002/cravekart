@@ -1,11 +1,13 @@
 import React from 'react';
 import './HeaderNavbar.css';
 import { useCart } from '../../context/CartContext';
+import { useAuth } from '../../context/AuthContext';
 import { useNavigate } from "react-router-dom";
 
-const HeaderNavbar = () => {
+const HeaderNavbar = ({ onLoginClick }) => {
   const cartState = useCart();
   const { totalItems } = cartState;
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -26,6 +28,11 @@ const HeaderNavbar = () => {
             <span className="cart-badge">{totalItems}</span>
           )}
         </a>
+        {user ? (
+          <button onClick={logout} className="auth-button">Logout</button>
+        ) : (
+          <button onClick={onLoginClick} className="auth-button">Login</button>
+        )}
       </nav>
     </header>
   );
